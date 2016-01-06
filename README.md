@@ -53,20 +53,22 @@ Pagrindinės apmokymui direktorijos:
 ## Parametrai
 
 * Garsynas
-<pre>
+```
 # Audio waveform and feature file information
 $CFG_WAVFILES_DIR = "$CFG_BASE_DIR/wav";
 $CFG_WAVFILE_EXTENSION = 'wav';
 $CFG_WAVFILE_TYPE = 'mswav'; # one of nist, mswav, raw
-</pre>
-# Požymių parametrai
-<pre>
+```
+
+* Požymių parametrai
+```
 $CFG_FEATFILES_DIR = "$CFG_BASE_DIR/feat";
 $CFG_FEATFILE_EXTENSION = 'mfc';
 $CFG_VECTOR_LENGTH = 13;
-</pre>
-# Tarpinės direktorijos
-<pre>
+```
+
+* Tarpinės direktorijos
+```
 # Variables used in main training of models
 $CFG_DICTIONARY     = "$CFG_LIST_DIR/$CFG_DB_NAME.dic";
 $CFG_RAWPHONEFILE   = "$CFG_LIST_DIR/$CFG_DB_NAME.phone";
@@ -74,25 +76,30 @@ $CFG_FILLERDICT     = "$CFG_LIST_DIR/.${CFG_DB_NAME}.filler";
 $CFG_LISTOFFILES    = "$CFG_LIST_DIR/${CFG_DB_NAME}_train.fileids";
 $CFG_TRANSCRIPTFILE = "$CFG_LIST_DIR/${CFG_DB_NAME}_train.transcription";
 $CFG_FEATPARAMS     = "$CFG_LIST_DIR/.${CFG_DB_NAME}_feat.params";
-</pre>
-# Modelio parametrai
-<pre>
+```
+
+* Modelio parametrai
+```
 $CFG_HMM_TYPE  = '.semi.'; # PocketSphinx pusiau testiniai
-</pre>
-<pre>
+```
+
+```
   $CFG_DIRLABEL = 'semi';
 # 4 srautai  PocketSphinx požymių 
   $CFG_FEATURE = "s2_4x";
   $CFG_NUM_STREAMS = 4;
   $CFG_INITIAL_NUM_DENSITIES = 256; # Gali būti  20h audio = 8, 30h audio = 16, 80h audio = 32
   $CFG_FINAL_NUM_DENSITIES = 256;
-</pre>
-<pre>
-# Susietų būsenų skaičiius (senones)
+```
+
+
+* Susietų būsenų skaičiius (senones)
+```
 $CFG_N_TIED_STATES = 200;# Gali būti  20h audio = 2000, 30h audio = 4000, 80h audio = 4000(taip pat)
-</pre>
-#Garso ir Požymių parametrai
-<pre>
+```
+
+* Garso ir Požymių parametrai
+```
 # Feature extraction parameters
 $CFG_WAVFILE_SRATE = 16000.0;
 $CFG_NUM_FILT = 25; # For wideband speech it's 25, for telephone 8khz reasonable value is 15
@@ -100,31 +107,31 @@ $CFG_LO_FILT = 130; # For telephone 8kHz speech value is 200
 $CFG_HI_FILT = 6800; # For telephone 8kHz speech value is 3500
 $CFG_TRANSFORM = "dct";
 $CFG_LIFTER = "22";
-</pre>
-# Dekodavimo parametrai
-<pre>
+```
+
+* Dekodavimo parametrai
+```
 $DEC_CFG_DICTIONARY     = "$CFG_BASE_DIR/etc/$CFG_DB_NAME.dic";
 $DEC_CFG_FILLERDICT     = "$CFG_BASE_DIR/etc/.${CFG_DB_NAME}.filler";
 $DEC_CFG_LISTOFFILES    = "$CFG_BASE_DIR/etc/${CFG_DB_NAME}_test.fileids";
 $DEC_CFG_TRANSCRIPTFILE = "$CFG_BASE_DIR/etc/${CFG_DB_NAME}_test.transcription";
 $DEC_CFG_RESULT_DIR     = "$CFG_BASE_DIR/result";
 $DEC_CFG_PRESULT_DIR     = "$CFG_BASE_DIR/presult";
-
 # This variables, used by the decoder, have to be user defined, and
 # may affect the decoder output
-
 $DEC_CFG_LANGUAGEMODEL  = "$CFG_BASE_DIR/etc/${CFG_DB_NAME}.lm.DMP";
 $DEC_CFG_LANGUAGEWEIGHT = "10";
 $DEC_CFG_BEAMWIDTH = "1e-80";
 $DEC_CFG_WORDBEAM = "1e-40";
-</pre> 
+```
+ 
 
 # Apmokymas
 
 Detaliau galite rasti informacijos: Training Acoustic Model For CMUSphinx
 Paleiskite komandą: 
-* Linux: <pre>sphinxtrain run</pre>
-* Windows <pre>python ../sphinxtrain/scripts/sphinxtrain run</pre>
+* Linux: `sphinxtrain run`
+* Windows `python ../sphinxtrain/scripts/sphinxtrain run`
 
 # Pastabos
 Pasibaigus apmokymams rezultatus galite surasti liepa.html faile. Aš gavau tokius rezultatus:
