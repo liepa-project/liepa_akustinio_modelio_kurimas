@@ -18,7 +18,7 @@ h1. Reikalavimai
 
 h1. Pasiruošimas apmokymui
 
-# Nusiklonuokite mokyno repositoriją   [[https://158.129.140.206/redmine/projects/liepa-dev/repository/mgreibus]]
+# Nusiklonuokite mokyno repositoriją [[http://<Nurodyti Serverį>]]
 
 Pagrindinės apmokymui direktorijos:
 
